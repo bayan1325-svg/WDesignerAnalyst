@@ -12,9 +12,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;600;700&display=swap');
         
-        /* تعريف اللون الوردي الغامق الجديد (Pink 600: #db2777) الذي سيستخدم كـ Accent */
+        /* تعريف اللون الوردي الغامق الجديد (Pink 600) الذي سيستخدم كـ Accent */
         :root {
-            --accent-color: #db2777; /* Tailwind Pink 600 for a deep, vibrant pink matching the logo */
+            --accent-color: #db2777; /* Tailwind Pink 600 for a deep, vibrant pink */
         }
 
         body {
@@ -73,7 +73,7 @@
         .bg-card {
             background-color: #ffffff; /* خلفية بيضاء للبطاقات */
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
-            border: 1px solid #fecaca; /* إطار وردي فاتح */
+            border: 1px solid #fce7f3; /* إطار وردي فاتح جداً */
         }
 
         /* تعديل ألوان الإدخال والنص في نموذج الاتصال */
@@ -103,7 +103,7 @@
                          alt="شعار المحلل المصمم" 
                          class="h-16 w-auto object-contain self-center">
                     
-                    <!-- اسم التطبيق بجوار الشعار - اللون أصبح داكناً ليتناسب مع الخلفية البيضاء، والحجم XL -->
+                    <!-- اسم التطبيق بجوار الشعار - أصبح باللون الأبيض لكن تم تغييره للداكن ليتناسب مع الخلفية البيضاء، والحجم XL -->
                     <span class="text-xl font-extrabold self-center text-gray-800" 
                           data-i18n="appTitle">المحلل المصمم</span> 
                 </div>
@@ -129,7 +129,7 @@
         
         
 <!-- قسم الملخص التعريفي (#about) -->
-<section id="about" class="py-12 px-6 lg:px-20 min-h-screen">
+<section id="about" class="py-12 px-6 lg:px-20">
             <div class="text-center">
                 
 <img id="profile-pic" 
@@ -159,7 +159,7 @@
 
         
 <!-- قسم المهارات (#skills) -->
-<section id="skills" class="py-12 px-6 lg:px-20 min-h-screen hidden">
+<section id="skills" class="py-12 px-6 lg:px-20 hidden">
             
 <h2 class="text-4xl font-bold text-pink-600 mb-12 text-center border-b-2 border-pink-400/50 pb-4" data-i18n="skillsTitle">المهارات التقنية</h2>
             
@@ -203,33 +203,31 @@
 
         
 <!-- قسم التواصل (#contact) -->
-<section id="contact" class="py-12 px-6 lg:px-20 min-h-screen hidden">
+<section id="contact" class="py-12 px-6 lg:px-20 hidden">
             
 <h2 class="text-4xl font-bold text-pink-600 mb-12 text-center border-b-2 border-pink-400/50 pb-4" data-i18n="contactTitle">تواصل معي</h2>
             
             
-<!-- نموذج الاتصال -->
-<div class="max-w-xl mx-auto bg-card p-8 rounded-xl">
+<div class="max-w-xl mx-auto bg-card p-8 rounded-xl border border-pink-300/50">
                 <form id="contact-form" class="space-y-6">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700" data-i18n="formNameLabel">الاسم الكامل</label>
+                        <label for="name" class="block text-sm font-medium text-gray-600" data-i18n="formNameLabel">الاسم الكامل</label>
                         
-<input type="text" id="name" name="name" required class="form-input mt-1 block w-full rounded-md shadow-sm p-3 focus:ring-pink-600 focus:border-pink-600">
+<input type="text" id="name" name="name" required class="form-input mt-1 block w-full rounded-md shadow-sm p-3">
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700" data-i18n="formEmailLabel">البريد الإلكتروني</label>
+                        <label for="email" class="block text-sm font-medium text-gray-600" data-i18n="formEmailLabel">البريد الإلكتروني</label>
                         
-<input type="email" id="email" name="email" required class="form-input mt-1 block w-full rounded-md shadow-sm p-3 focus:ring-pink-600 focus:border-pink-600">
+<input type="email" id="email" name="email" required class="form-input mt-1 block w-full rounded-md shadow-sm p-3">
                     </div>
 
                     
 <div>
-                        <label for="message-topic" class="block text-sm font-medium text-gray-700" data-i18n="formTopicLabel">موضوع رسالتك (للمساعدة في الصياغة)</label>
+                        <label for="message-topic" class="block text-sm font-medium text-gray-600" data-i18n="formTopicLabel">موضوع رسالتك (للمساعدة في الصياغة)</label>
                         <div class="mt-1 flex space-x-2 space-x-reverse" id="topic-input-container">
                             
-<input type="text" id="message-topic" data-i18n-placeholder="formTopicPlaceholder" placeholder="مثال: تصميم نموذج تسجيل دخول جديد" class="form-input block w-full rounded-md shadow-sm p-3 focus:ring-pink-600 focus:border-pink-600">
+<input type="text" id="message-topic" data-i18n-placeholder="formTopicPlaceholder" placeholder="مثال: تصميم نموذج تسجيل دخول جديد" class="form-input block w-full rounded-md shadow-sm p-3">
                             
-<!-- زر الصياغة التلقائية -->
 <button type="button" id="ai-draft-button" class="cta-button flex-shrink-0 bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-4 rounded-lg text-sm disabled:opacity-50 disabled:cursor-not-allowed">
                                 ✨ <span data-i18n="formDraftButton">صياغة تلقائية</span>
                             </button>
@@ -241,13 +239,12 @@
                     </div>
                     
                     <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700" data-i18n="formMessageLabel">الرسالة</label>
+                        <label for="message" class="block text-sm font-medium text-gray-600" data-i18n="formMessageLabel">الرسالة</label>
                         
-<textarea id="message" name="message" rows="4" required class="form-input mt-1 block w-full rounded-md shadow-sm p-3 focus:ring-pink-600 focus:border-pink-600"></textarea>
+<textarea id="message" name="message" rows="4" required class="form-input mt-1 block w-full rounded-md shadow-sm p-3"></textarea>
                     </div>
 
                     
-<!-- زر الإرسال -->
 <button type="submit" class="cta-button w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-4 rounded-lg">
                         <span data-i18n="formSubmitButton">إرسال الرسالة</span>
                     </button>
@@ -255,17 +252,17 @@
             </div>
 
             
-<!-- معلومات التواصل -->
-<div class="mt-12 text-center space-y-4 text-lg text-gray-700">
+<div class="mt-12 text-center space-y-4 text-lg">
                 
-<p><i class="fas fa-envelope text-pink-600 ml-2"></i> <span data-i18n="contactEmail">البريد الإلكتروني:</span> <span class="text-pink-600" dir="ltr">Bayan1325@gmail.com</span></p>
+<p class="text-gray-600"><i class="fas fa-envelope text-pink-600 ml-2"></i> <span data-i18n="contactEmail">البريد الإلكتروني:</span> <span class="text-pink-600" dir="ltr">Bayan1325@gmail.com</span></p>
                 
-<p><i class="fas fa-phone text-pink-600 ml-2"></i> <span data-i18n="contactPhone">الهاتف:</span> <span class="text-pink-600" dir="ltr">+962 7 7236 4081</span></p>
+<p class="text-gray-600"><i class="fas fa-phone text-pink-600 ml-2"></i> <span data-i18n="contactPhone">الهاتف:</span> <span class="text-pink-600" dir="ltr">+962 7 7236 4081</span></p>
                 <div class="flex justify-center space-x-6 space-x-reverse mt-6">
                     
-<a href="https://www.facebook.com/profile.php?id=61583046233567" target="_blank" class="text-3xl transition duration-300 social-icon"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/962772364081" target="_blank" class="text-3xl transition duration-300 social-icon"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/theadvanalyst_1?igsh=amJqYXNmbThscXIw" target="_blank" class="text-3xl transition duration-300 social-icon"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/profile.php?id=61583046233567" target="_blank" class="text-gray-500 hover:text-pink-600 text-3xl transition duration-300 social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/962772364081" target="_blank" class="text-gray-500 hover:text-pink-600 text-3xl transition duration-300 social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <!-- رابط الإنستغرام المحدث -->
+                    <a href="https://www.instagram.com/theadvanalyst_1?igsh=amJqYXNmbThscXIw" target="_blank" class="text-gray-500 hover:text-pink-600 text-3xl transition duration-300 social-icon"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             
@@ -274,7 +271,6 @@
     </main>
 
     
-<!-- التذييل (Footer) -->
 <footer class="bg-white border-t border-pink-300/50 py-6 text-center text-gray-500">
         <p><span data-i18n="footerCopy">جميع الحقوق محفوظة &copy;</span> <span id="current-year">2025</span>. <span data-i18n="footerAnalyst">المحلل المصمم.</span></p>
     </footer>
@@ -316,7 +312,7 @@
                 'skill2_3': 'تحليل وتصفية البيانات في Excel/Sheets',
                 'skillH3': 'ضمان الجودة والاختبار',
                 'skill3_1': 'اختبار قابلية الاستخدام (Usability Testing)',
-                'skill3_2': 'التأكد من سلامة وتكامل البيانات (Data Integrity) ',
+                'skill3_2': 'التأكد من سلامة وتكامل البيانات (Data Integrity)',
                 'skill3_3': 'تصحيح الأخطاء واستكشاف المشكلات (Debugging)',
                 'skill3_4': 'اختبار التوافق عبر المتصفحات والأجهزة (Cross-Browser)',
                 // Contact Section
@@ -326,327 +322,286 @@
                 'formTopicLabel': 'موضوع رسالتك (للمساعدة في الصياغة)',
                 'formTopicPlaceholder': 'مثال: تصميم نموذج تسجيل دخول جديد',
                 'formDraftButton': 'صياغة تلقائية',
+                'loadingDraft': 'جارٍ صياغة المسودة باستخدام Gemini...',
                 'formMessageLabel': 'الرسالة',
                 'formSubmitButton': 'إرسال الرسالة',
                 'contactEmail': 'البريد الإلكتروني:',
                 'contactPhone': 'الهاتف:',
-                // Footer & Status Messages (AI Drafting)
+                // Footer
                 'footerCopy': 'جميع الحقوق محفوظة &copy;',
                 'footerAnalyst': 'المحلل المصمم.',
-                'loadingDraft': 'جارٍ صياغة المسودة باستخدام Gemini...',
-                'topicRequired': 'الرجاء إدخال موضوع بسيط للرسالة لمساعدتك في الصياغة.',
-                'draftSuccess': 'تمت صياغة الرسالة بنجاح! يمكنك الآن تعديلها وإرسالها.',
-                'draftError': 'حدث خطأ في الصياغة التلقائية. تم إدراج نص بديل.',
-                'formSubmitSuccess': 'تم استلام رسالتك بنجاح! شكراً لتواصلك.'
+                // Error Messages (not strictly text, but useful for L10N)
+                'errorFetch': 'عذراً، فشلت عملية الصياغة التلقائية. الرجاء المحاولة مرة أخرى.',
+                'errorEmptyTopic': 'الرجاء إدخال موضوع الرسالة لإنشاء مسودة.',
             },
             'en': {
                 // Meta and Navigation
-                'pageTitle': 'The Analyst Designer | Web Interface Designer & Data Entry Specialist',
+                'pageTitle': 'The Analyst Designer | Web Interface Designer & Data Entry',
                 'appTitle': 'The Analyst Designer',
-                'navAbout': 'About Me',
+                'navAbout': 'About',
                 'navSkills': 'Skills',
                 'navContact': 'Contact',
                 'toggleButton': 'العربية / AR',
                 // About Section
                 'heroTitle': 'Welcome! I am The Analyst Designer',
                 'heroSubtitle': 'Web Interface Designer & Data Entry Specialist',
-                'summaryP1': 'I am a web interface designer who transforms complex data into simple, effective user experiences, ensuring that forms and interfaces are not only beautiful but also accurate and easy to use.',
-                'summaryP2': 'I focus on building dynamic and responsive entry interfaces with the strict application of data validation rules to guarantee the highest quality of input information.',
+                'summaryP1': 'Web interface designer, I transform complex data into simple and effective user experiences, ensuring that forms and interfaces are not only aesthetically pleasing but also accurate and user-friendly.',
+                'summaryP2': 'I focus on building dynamic and responsive input interfaces while applying strict data validation rules to guarantee the highest quality of entered information.',
                 // Skills Section
                 'skillsTitle': 'Technical Skills',
                 'skillH1': 'Interface Design & Development',
-                'skill1_1': 'UI/UX design using Figma.',
-                'skill1_2': 'Developing interactive functionalities using JavaScript and React library.',
-                'skill1_3': 'Ensuring full compatibility with all devices (mobile, tablet, desktop).',
-                'skillH2': 'Data Entry & Processing',
-                'skill2_1': 'Multi-level data validation.',
-                'skill2_2': 'Working with databases (SQL/NoSQL).',
-                'skill2_3': 'Data analysis and filtering in Excel/Sheets.',
+                'skill1_1': 'Designing User Interface and User Experience (UI/UX) using Figma.',
+                'skill1_2': 'Developing interactive functions using JavaScript and the React library.',
+                'skill1_3': 'Ensuring full compatibility with all devices (Mobile, Tablet, Desktop).',
+                'skillH2': 'Data Entry and Processing',
+                'skill2_1': 'Multi-level Data Validation.',
+                'skill2_2': 'Working with Databases (SQL/NoSQL).',
+                'skill2_3': 'Analyzing and filtering data in Excel/Sheets.',
                 'skillH3': 'Quality Assurance & Testing',
                 'skill3_1': 'Usability Testing.',
                 'skill3_2': 'Ensuring Data Integrity.',
                 'skill3_3': 'Debugging and Troubleshooting.',
-                'skill3_4': 'Cross-Browser and device compatibility testing.',
+                'skill3_4': 'Cross-Browser and Device Compatibility Testing.',
                 // Contact Section
                 'contactTitle': 'Contact Me',
                 'formNameLabel': 'Full Name',
                 'formEmailLabel': 'Email Address',
-                'formTopicLabel': 'Message Topic (for drafting assistance)',
-                'formTopicPlaceholder': 'Example: Designing a new login form',
-                'formDraftButton': 'AI Draft',
+                'formTopicLabel': 'Your Message Topic (for drafting assistance)',
+                'formTopicPlaceholder': 'Example: Designing a New Login Form',
+                'formDraftButton': 'Auto Draft',
+                'loadingDraft': 'Drafting message using Gemini...',
                 'formMessageLabel': 'Message',
                 'formSubmitButton': 'Send Message',
                 'contactEmail': 'Email:',
                 'contactPhone': 'Phone:',
-                // Footer & Status Messages (AI Drafting)
+                // Footer
                 'footerCopy': 'All rights reserved &copy;',
                 'footerAnalyst': 'The Analyst Designer.',
-                'loadingDraft': 'Drafting message using Gemini...',
-                'topicRequired': 'Please enter a brief message topic to help with drafting.',
-                'draftSuccess': 'Message successfully drafted! You can now edit and send it.',
-                'draftError': 'Automatic drafting failed. Placeholder text inserted.',
-                'formSubmitSuccess': 'Your message has been received successfully! Thank you for contacting us.'
+                // Error Messages
+                'errorFetch': 'Sorry, the auto-draft process failed. Please try again.',
+                'errorEmptyTopic': 'Please enter a message topic to generate a draft.',
             }
         };
 
-        /**
-         * وظيفة مساعدة لإجراء طلبات جلب مع تراجع أسي (Exponential Backoff).
-         */
-        async function exponentialBackoffFetch(url, options, retries = 5, delay = 1000) {
-            for (let i = 0; i < retries; i++) {
-                try {
-                    const response = await fetch(url, options);
-                    if (!response.ok) {
-                        if (response.status === 429 && i < retries - 1) { // Rate limit
-                            await new Promise(resolve => setTimeout(resolve, delay));
-                            delay *= 2; // Exponential backoff
-                            continue;
-                        }
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response;
-                } catch (error) {
-                    if (i === retries - 1) {
-                        console.error("Fetch failed after multiple retries:", error);
-                        throw error;
-                    }
-                    await new Promise(resolve => setTimeout(resolve, delay));
-                    delay *= 2;
-                }
-            }
-        }
-        
-        /**
-         * وظيفة لتطبيق الترجمة على جميع العناصر في الصفحة.
-         */
-        function applyTranslation(lang) {
-            // تحديث سمة اللغة واتجاه الصفحة
+        // وظيفة تحديث اللغة
+        function updateLanguage(lang) {
+            const isRTL = lang === 'ar';
             document.documentElement.lang = lang;
-            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
 
-            // تعديل تنسيق flex لأزرار التواصل الاجتماعي بناءً على الاتجاه
-            const socialContainer = document.querySelector('#contact .flex');
-            if (socialContainer) {
-                // Tailwind classes for direction/reversal
-                if (lang === 'ar') {
-                    socialContainer.classList.add('space-x-reverse');
-                } else {
-                    socialContainer.classList.remove('space-x-reverse');
-                }
-            }
-            
-            // تحديث جميع النصوص بناءً على سمة data-i18n
+            // تحديث النصوص
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
+                if (translations[lang][key]) {
                     element.textContent = translations[lang][key];
                 }
             });
 
-            // تحديث الأوصاف (Placeholders)
+            // تحديث placeholder
             document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
                 const key = element.getAttribute('data-i18n-placeholder');
-                if (translations[lang] && translations[lang][key]) {
+                if (translations[lang][key]) {
                     element.placeholder = translations[lang][key];
                 }
             });
 
             // تحديث زر تبديل اللغة
             const toggleButton = document.getElementById('lang-toggle');
-            if (toggleButton) {
-                toggleButton.textContent = translations[lang].toggleButton;
+            toggleButton.textContent = translations[lang]['toggleButton'];
+            currentLang = lang;
+
+            // تحديث حالة الروابط النشطة
+            updateActiveLink();
+        }
+
+        // وظيفة التبديل بين اللغات
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            updateLanguage(newLang);
+        });
+
+        // وظيفة تفعيل الرابط النشط في شريط التنقل
+        function updateActiveLink() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const headerHeight = document.querySelector('header').offsetHeight;
+
+            sections.forEach(section => {
+                if (section.id && section.id !== 'contact' && section.id !== 'skills') {
+                    section.classList.remove('hidden'); // إظهار الأقسام المطلوبة لـ ScrollSpy
+                }
+            });
+
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - headerHeight - 10;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-link');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active-link');
+                }
+            });
+            
+            // إظهار وإخفاء الأقسام بناءً على الرابط النشط
+            sections.forEach(section => {
+                const sectionId = section.getAttribute('id');
+                if (sectionId === 'about' || sectionId === 'skills' || sectionId === 'contact') {
+                    if (sectionId === current) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                }
+            });
+            
+            // تحديث الرابط النشط عند النقر على روابط التنقل
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    const offsetTop = targetSection.offsetTop - headerHeight;
+
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    
+                    // تحديث الحالة النشطة على الفور
+                    navLinks.forEach(l => l.classList.remove('active-link'));
+                    this.classList.add('active-link');
+
+                    // إخفاء الأقسام الأخرى عند النقر
+                    sections.forEach(section => {
+                        const sId = section.getAttribute('id');
+                        if (sId === 'about' || sId === 'skills' || sId === 'contact') {
+                             if (sId === targetId) {
+                                section.classList.remove('hidden');
+                            } else {
+                                section.classList.add('hidden');
+                            }
+                        }
+                    });
+
+                });
+            });
+
+        }
+
+        // وظيفة للتعامل مع طلب Gemini API
+        async function fetchGeminiDraft(topic, language) {
+            const apiUrl = `${API_URL_BASE}${MODEL_NAME}:generateContent?key=${API_KEY}`;
+            
+            const systemPrompt = language === 'ar' ? 
+                `أنت مساعد صياغة رسائل مهنية. مهمتك هي كتابة مسودة رسالة بريد إلكتروني مهنية تتضمن تحية قصيرة، والغرض من الرسالة بناءً على الموضوع المقدم، وعبارة ختامية مهذبة. يجب أن تكون المسودة باللغة العربية الفصحى. لا تضمن أي معلومات اتصال أو اسم في الرسالة.` :
+                `You are a professional message drafting assistant. Your task is to write a draft of a professional email message including a brief greeting, the purpose of the message based on the provided topic, and a polite closing statement. The draft must be in standard English. Do not include any contact information or names in the message.`;
+
+            const userQuery = language === 'ar' ? 
+                `موضوع الرسالة: ${topic}. اكتب مسودة الرسالة الآن.` : 
+                `Message topic: ${topic}. Write the message draft now.`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+            };
+
+            const maxRetries = 3;
+            let response = null;
+            
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok) {
+                        break; // الخروج من الحلقة في حال نجاح الاستجابة
+                    }
+                } catch (error) {
+                    console.error('Fetch error during retry:', error);
+                }
+                
+                if (i < maxRetries - 1) {
+                    const delay = Math.pow(2, i) * 1000; // تأخير 1s, 2s, 4s
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
             }
             
-            // تحديث العنوان الرئيسي للصفحة
-            document.title = translations[lang].pageTitle;
+            if (!response || !response.ok) {
+                return { error: translations[language]['errorFetch'] };
+            }
+
+            const result = await response.json();
+            const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+            return { text };
         }
 
-        /**
-         * وظيفة لتبديل اللغة وتطبيق الترجمة.
-         */
-        function toggleLanguage() {
-            currentLang = (currentLang === 'ar') ? 'en' : 'ar';
-            localStorage.setItem('userLang', currentLang);
-            applyTranslation(currentLang);
-        }
-
-        /**
-         * وظيفة صياغة الرسالة باستخدام Gemini API.
-         * ملاحظة: يتم إرسال التعليمات والاستفسار إلى Gemini باللغة العربية للحصول على أفضل نتيجة، ويتم ترجمة رسائل الحالة فقط.
-         */
-        async function draftMessageWithGemini() {
+        // وظيفة التعامل مع زر "صياغة تلقائية"
+        async function handleAiDraft() {
             const topicInput = document.getElementById('message-topic');
             const messageTextarea = document.getElementById('message');
             const loadingIndicator = document.getElementById('ai-loading');
             const draftButton = document.getElementById('ai-draft-button');
+            const topic = topicInput.value.trim();
 
-            const userTopic = topicInput.value.trim();
-            
-            // وظيفة داخلية لعرض الحالة بترجمة
-            const showStatus = (key, isError = false) => {
-                const message = translations[currentLang][key];
-                // تم تعديل الألوان لاستخدام Pink 600
-                const colorClass = isError ? 'text-red-600' : 'text-pink-600';
-                loadingIndicator.innerHTML = `<i class="fas ${isError ? 'fa-exclamation-triangle' : 'fa-info-circle'} ml-1"></i> ${message}`;
-                loadingIndicator.classList.remove('hidden', 'text-red-600', 'text-gray-800', 'text-fuchsia-600'); // إزالة فوشيا
-                loadingIndicator.classList.add(colorClass);
-                
-                if (!isError) {
-                    setTimeout(() => loadingIndicator.classList.add('hidden'), 5000); 
-                }
-            };
-            
-            if (!userTopic) {
-                showStatus('topicRequired', true);
+            if (!topic) {
+                alert(translations[currentLang]['errorEmptyTopic']); // استخدام alert هنا لتسهيل المثال، يفضل تبديلها بـ Modal
                 return;
             }
 
-            showStatus('loadingDraft');
+            // تعطيل الزر وإظهار مؤشر التحميل
             draftButton.disabled = true;
-            messageTextarea.value = ''; // مسح الرسالة السابقة
-            
-            // تعليمات النظام والطلب باللغة العربية (لتحسين جودة الصياغة المهنية العربية)
-            const systemPrompt = `أنت مساعد احترافي لصياغة رسائل البريد الإلكتروني. مهمتك هي كتابة رسالة استفسار مهذبة واحترافية باللغة العربية موجهة إلى مصمم واجهات ويب/مختص في إدخال ومعالجة البيانات ("المحلل المصمم"). يجب أن تكون الرسالة موجزة ومركزة على الموضوع الذي يقدمه المستخدم. اختم الرسالة بعبارة مهذبة (مثل: مع خالص التقدير،) وترك مساحة لاسم المرسل.`;
+            loadingIndicator.classList.remove('hidden');
 
-            const userQuery = `صغّر مسودة رسالة احترافية بناءً على الموضوع التالي: "${userTopic}".`;
-            
-            const payload = {
-                contents: [{ parts: [{ text: userQuery }] }],
-                systemInstruction: {
-                    parts: [{ text: systemPrompt }]
-                },
-            };
-            
-            const apiUrl = `${API_URL_BASE}${MODEL_NAME}:generateContent?key=${API_KEY}`;
-            const options = {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            };
+            const { text, error } = await fetchGeminiDraft(topic, currentLang);
 
-            try {
-                const response = await exponentialBackoffFetch(apiUrl, options);
-                const result = await response.json();
-                
-                const generatedText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+            // تمكين الزر وإخفاء مؤشر التحميل
+            draftButton.disabled = false;
+            loadingIndicator.classList.add('hidden');
 
-                if (generatedText) {
-                    messageTextarea.value = generatedText;
-                    showStatus('draftSuccess', false);
-                } else {
-                    throw new Error("API failed to draft message.");
-                }
-            } catch (error) {
-                console.error("Gemini API Error:", error);
-                
-                // رسالة بديلة باللغة العربية
-                const fallbackDraft = `عزيزي المحلل المصمم،\n\nأرجو أن تكون بخير.\n\nأود الاستفسار بخصوص: "${userTopic}".\n\nأرجو التواصل معي لمناقشة التفاصيل.\n\nمع خالص التقدير،\n[اسمك]`;
-                messageTextarea.value = fallbackDraft;
-                
-                showStatus('draftError', true);
-            } finally {
-                draftButton.disabled = false;
+            if (error) {
+                alert(error); // استخدام alert هنا لتسهيل المثال، يفضل تبديلها بـ Modal
+            } else if (text) {
+                // إلحاق المسودة في بداية حقل الرسالة
+                messageTextarea.value = text + '\n\n---\n\n' + messageTextarea.value;
+                messageTextarea.focus();
             }
         }
-        
-        // =================================== //
-        // وظائف التنقل (Navigation Functions) //
-        // =================================== //
 
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
+        // تهيئة الصفحة عند التحميل
+        window.onload = function() {
+            // تحديد السنة الحالية في التذييل
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // تطبيق اللغة الافتراضية (العربية)
+            updateLanguage('ar');
+
+            // تفعيل وظيفة التمرير Spy
+            updateActiveLink(); // التحديث الأولي
+            window.addEventListener('scroll', updateActiveLink);
             
-            sections.forEach(section => {
-                // إظهار القسم المطلوب وإخفاء البقية
-                if (section.id === sectionId) {
-                    section.classList.remove('hidden');
-                } else {
-                    section.classList.add('hidden');
-                }
+            // ربط زر الصياغة التلقائية
+            document.getElementById('ai-draft-button').addEventListener('click', handleAiDraft);
+
+            // منع إرسال النموذج فعلياً (لأننا لا نملك backend)
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert(currentLang === 'ar' ? 'تم استلام رسالتك بنجاح! (في تطبيق حقيقي، سيتم إرسال الرسالة الآن عبر خادم).' : 'Your message has been received successfully! (In a real application, the message would now be sent via a server).');
             });
 
-            // تحديث حالة الرابط النشط في شريط التنقل
-            navLinks.forEach(link => {
-                link.classList.remove('active-link');
-                // تغيير لون الخلفية عند التمرير
-                link.classList.add('hover:bg-pink-100'); 
-
-                if (link.getAttribute('href') === '#' + sectionId) {
-                    link.classList.add('active-link');
-                    link.classList.remove('hover:bg-pink-100');
-                }
-            });
-            
-            // تحديث الـ URL دون إعادة تحميل الصفحة
-            history.pushState(null, null, '#' + sectionId);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const langToggleButton = document.getElementById('lang-toggle');
-            const navLinks = document.querySelectorAll('.nav-link');
-            const contactForm = document.getElementById('contact-form');
-            const aiDraftButton = document.getElementById('ai-draft-button'); 
-            
-            // 0. تهيئة اللغة: المحاولة لاسترداد اللغة المحفوظة، وإلا الافتراضية 'ar'
-            const storedLang = localStorage.getItem('userLang');
-            currentLang = (storedLang && translations[storedLang]) ? storedLang : 'ar';
-            applyTranslation(currentLang);
-            
-            // 4. تحديث السنة تلقائياً في التذييل
-            const currentYearSpan = document.getElementById('current-year');
-            if (currentYearSpan) {
-                const currentYear = new Date().getFullYear();
-                currentYearSpan.textContent = currentYear;
-            }
-
-            // 1. تحديد القسم الأولي النشط عند تحميل الصفحة
-            const initialSection = window.location.hash.substring(1) || 'about';
-            showSection(initialSection);
-
-            // 2. تفعيل التفاعل مع روابط التنقل
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const sectionId = link.getAttribute('href').substring(1);
-                    showSection(sectionId);
-                });
-            });
-
-            // 3. معالجة نموذج الاتصال (لأغراض العرض فقط)
-            if (contactForm) {
-                contactForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    
-                    const loadingIndicator = document.getElementById('ai-loading');
-                    // عرض رسالة النجاح باللغة الحالية
-                    const successMessage = translations[currentLang]['formSubmitSuccess'];
-                    
-                    // استخدام pink-600
-                    const colorClass = 'text-pink-600';
-                    loadingIndicator.innerHTML = `<i class="fas fa-check-circle ml-1"></i> ${successMessage}`;
-                    loadingIndicator.classList.remove('hidden', 'text-red-600', 'text-gray-800');
-                    loadingIndicator.classList.add(colorClass);
-                    
-                    // إخفاء الرسالة بعد 5 ثوانٍ
-                    setTimeout(() => {
-                        loadingIndicator.classList.add('hidden');
-                    }, 5000);
-                    
-                    contactForm.reset();
-                });
-            }
-
-            // 5. تفعيل زر الصياغة التلقائية
-            if (aiDraftButton) {
-                aiDraftButton.addEventListener('click', draftMessageWithGemini);
-            }
-            
-            // 6. تفعيل زر تبديل اللغة
-            if (langToggleButton) {
-                langToggleButton.addEventListener('click', toggleLanguage);
-            }
-        });
+             // التأكد من تطبيق حالة نشطة فور التحميل
+             const aboutLink = document.querySelector('.nav-link[href="#about"]');
+             if (aboutLink) aboutLink.classList.add('active-link');
+        };
     </script>
 </body>
 </html>
